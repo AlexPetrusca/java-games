@@ -424,7 +424,7 @@ public class BreakoutScreen extends AbstractGamePanel {
 
   private void maybeSpawnPowerUp(BreakBox box) {
     int random = (int)(100 * Math.random());
-    if(random < 10) {
+    if(random < 40) {
       PowerUp power = new PowerUp(box);
       powerUps.add(power);
     }

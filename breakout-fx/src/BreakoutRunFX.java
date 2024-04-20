@@ -7,9 +7,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.FileNotFoundException;
-import java.net.URISyntaxException;
-
 public class BreakoutRunFX extends Application {
   public enum BreakoutState {
     INTRO,
@@ -101,6 +98,7 @@ public class BreakoutRunFX extends Application {
   }
 
   public static void main(String[] args) {
+    java.awt.Toolkit.getDefaultToolkit();
     launch(args);
   }
 }

@@ -52,7 +52,7 @@ public class PowerUp {
   }
 
   public void draw(Graphics2D g) {
-    Image lel = Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\powerUpIcons\\" + power.name() +".png"));
+    Image lel = Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/powerUpIcons/" + power.name() +".png"));
     anim.animate(g);
     g.setClip(bounds);
     g.drawImage(lel, (int)(point.getX()), (int)(point.getY()), null);

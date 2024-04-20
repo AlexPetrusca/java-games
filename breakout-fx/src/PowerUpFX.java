@@ -13,6 +13,7 @@ public class PowerUpFX {
   private PowerUps power;
   private double fallSpeed;
   private InFadeAnimatorFX anim;
+  private Image image;
   public static enum PowerUps {
     POWER_BALL,
     SPEED_UP,
@@ -34,22 +35,15 @@ public class PowerUpFX {
     int random = (int)(Math.random() * PowerUps.values().length);
     power = PowerUps.values()[random];
 
-//    power = PowerUps.SPLIT_BALLS;
-
-//    if(random > PowerUps.values().length/2) {
-//      power = PowerUps.GUN_PADDLE;
-//    } else {
-//      power = PowerUps.MAGNETIC_PADDLE;
-//    }
+    image = BreakoutScreenFX.loadFXImage("assets/powerUpIcons/" + power.name() +".png");
 
     fallSpeed = 5;
     anim = new InFadeAnimatorFX(0.05f);
   }
 
   public void draw(GraphicsContext g) {
-    Image lel = BreakoutScreenFX.loadFXImage("assets\\powerUpIcons\\" + power.name() +".png");
     anim.animate(g);
-    g.drawImage(lel, point.getX(), point.getY());
+    g.drawImage(image, point.getX(), point.getY());
     g.setStroke(Color.BLACK);
     g.strokeRect(bounds.getX(), bounds.getY(), bounds.getWidth(), bounds.getHeight());
     g.setGlobalAlpha(1.0f);

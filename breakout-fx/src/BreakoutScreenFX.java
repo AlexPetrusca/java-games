@@ -301,6 +301,11 @@ public class BreakoutScreenFX extends StackPane {
       double x = event.getScreenX();
       requestFocus();
       mouseDisplacement = x - (int) (runFX.getStage().getX() + runFX.getStage().getWidth()/2);
+
+//      System.out.println("centerX:" + (int) (runFX.getStage().getX() + runFX.getStage().getWidth()/2));
+//      System.out.println("x:" + x);
+//      System.out.println();
+
       if (isConfused) {
         mouseDisplacement = -mouseDisplacement;
       }
@@ -396,7 +401,7 @@ public class BreakoutScreenFX extends StackPane {
           }
           level++;
           levelChangeCounter = 0;
-          loadBoxes("assets\\levels\\level" + level + ".png");  //fixme game over check
+          loadBoxes("assets/levels/level" + level + ".png");  //fixme game over check
           balls = new ArrayList<BallFX>();
           balls.add(new BallFX(runFX.width / 2, 3 * runFX.height / 4, true));
           powerUps = new ArrayList<PowerUpFX>();

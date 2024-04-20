@@ -16,7 +16,7 @@ public class PongGame extends AbstractGamePanel implements Animator {
   EnemyBat enemy;
 
   public PongGame(PongRun game) {
-    back = Toolkit.getDefaultToolkit().getImage(getClass().getResource("images\\game.jpg"));
+    back = Toolkit.getDefaultToolkit().getImage(getClass().getResource("images/game.jpg"));
     ball = new Ball(200, 200, 12, -30);
     player = new PlayerBat(950, 704/2, 3, 60, 10);
     enemy = new EnemyBat(20, 704/2, 3, 60, 10);
